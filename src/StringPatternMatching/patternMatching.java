@@ -2,7 +2,7 @@ package StringPatternMatching;
 
 /**
  * Created by mballa on 03.11.2017.
- * naive implementation O((S-P)*P)
+ * naive implementation O((S-P)+1*P)
  */
 public class patternMatching {
 
