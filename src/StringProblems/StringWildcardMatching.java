@@ -19,10 +19,10 @@ public class StringWildcardMatching {
                 if(j<n && ((text.charAt(i)== pat.charAt(j)) || (pat.charAt(j)== '?'))) {
                     j++;
                     i++;
-                } else if(j<n && pat.charAt(j)== '*') {
+                } else if(j<n && pat.charAt(j)== '*') { //backtracking to last * , save the last * position
                     starIndex= j;
                     iIndex= i;
-                    j++;
+                    j++; //matches
                 } else if(starIndex!= -1) {
                     j= starIndex+1;
                     i= iIndex+1;
