@@ -46,7 +46,7 @@ public class MinIntHeap {
 
     public int poll() throws IllegalAccessException {
         if(size == 0 ) throw new IllegalAccessException("Heap is empty");
-        //copy last element here and heappifyDown
+        //copy last element here and heapifyDown
         int item = items[0];
         items[0] = items[size-1];
         size--;

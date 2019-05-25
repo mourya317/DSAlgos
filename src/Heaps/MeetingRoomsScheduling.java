@@ -29,7 +29,7 @@ public class MeetingRoomsScheduling {
         m[4] = new Meeting(4,9);
 
 
-        System.out.println(checkNumberOfOverlaps(m));
+       // System.out.println(checkNumberOfOverlaps(m));
         System.out.println(minRooms(m));
     }
 
@@ -81,7 +81,7 @@ public class MeetingRoomsScheduling {
         int count =1;
         for(int i=1;i<meetings.length;i++){
             int prev = queue.peek();
-            if(prev < meetings[i].end){
+            if(prev <= meetings[i].start){
                 //release the room
                 queue.poll();
             }else{
@@ -92,7 +92,6 @@ public class MeetingRoomsScheduling {
         }
 
         return count;
-
     }
 
 
