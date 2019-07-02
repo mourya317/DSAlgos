@@ -1,1 +1,2 @@
-Optimal Substructure property
+Optimal Substructure property - optimal solution can be found by finding the optimal solutions for subproblems.
+Example - shortest path problem , (Not the longest path problem)

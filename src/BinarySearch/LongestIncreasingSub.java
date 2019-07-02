@@ -12,7 +12,8 @@ public class LongestIncreasingSub {
     public static int max_ref =1;
     public static void main(String[] args) {
         int[] arr = {10, 22, 9, 33, 21, 50, 41, 60};
-        lis(arr,arr.length);
+        int[] arr1 = {1, 7, 6, 10};
+        lis(arr1,arr1.length);
         System.out.println("LIS:"+max_ref);
         System.out.println("LIS DP:"+LIS(arr,arr.length));
         System.out.println("LIS Binary:"+LISBinary(arr,arr.length));
