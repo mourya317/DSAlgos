@@ -120,6 +120,39 @@ public class Traversals {
 
 
 
+    public static void verticalOrder(TreeNode n){
+        //using preorder
+        if(n == null)return;
+        Stack<TreeNode> stack = new Stack<>();
+        Map<Integer , ArrayList<TreeNode>> result = new TreeMap<>();
+        stack.push(n);
+
+        while(!stack.isEmpty()){
+            TreeNode curr = stack.pop();
+            if(result.get(curr.level) != null) {
+                ArrayList<TreeNode> list = result.get(curr.level);
+                        list.add(curr);
+                result.put(curr.level, list);
+            }else{
+                ArrayList<TreeNode> list = new ArrayList<>();
+                list.add(curr);
+                result.put(curr.level, list);
+            }
+
+            if(curr.right !=null){
+                curr.right.level+=1;
+                stack.push(curr.right);
+            }
+
+            if(curr.left != null){
+                curr.left.level-=1;
+                stack.push(curr.left);
+            }
+
+        }
+
+       // result.forEach(v -> );
+    }
 
 
 
@@ -129,11 +162,13 @@ public class Traversals {
         int data;
         TreeNode left;
         TreeNode right;
+        int level;
 
         TreeNode(int data){
             this.data=data;
             this.left=null;
             this.right=null;
+            this.level = 0;
         }
     }
 

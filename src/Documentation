@@ -1,0 +1,137 @@
+1. Sliding window:
+
+Following are some ways you can identify that the given problem might require a sliding window:
+
+The problem input is a linear data structure such as a linked list, array, or string
+You’re asked to find the longest/shortest substring, subarray, or a desired value
+
+Common problems you use the sliding window pattern with:
+
+Maximum sum subarray of size ‘K’ (easy)
+Longest substring with ‘K’ distinct characters (medium)
+String anagrams (hard)
+
+2. Two Pointers or Iterators
+
+Ways to identify when to use the Two Pointer method:
+
+It will feature problems where you deal with sorted arrays (or Linked Lists) and need to find a set of elements that fulfill certain constraints
+The set of elements in the array is a pair, a triplet, or even a subarray
+
+Here are some problems that feature the Two Pointer pattern:
+
+Squaring a sorted array (easy)
+Triplets that sum to zero (medium)
+Comparing strings that contain backspaces (medium)
+
+3. Tree BFS
+
+How to identify the Tree BFS pattern:
+If you’re asked to traverse a tree in a level-by-level fashion (or level order traversal)
+Problems featuring Tree BFS pattern:
+Binary Tree Level Order Traversal (easy)
+Zigzag Traversal (medium)
+
+4. Tree DFS
+
+The Tree DFS pattern works by starting at the root of the tree, if the node is not a leaf you need to do three things:
+Decide whether to process the current node now (pre-order), or between processing two children (in-order) or after processing both children (post-order).
+Make two recursive calls for both the children of the current node to process them.
+
+How to identify the Tree DFS pattern:
+
+If you’re asked to traverse a tree with in-order, preorder, or postorder DFS
+If the problem requires searching for something where the node is closer to a leaf
+
+Problems featuring Tree DFS pattern:
+Sum of Path Numbers (medium)
+All Paths for a Sum (medium)
+
+5. Merge intervals
+
+How do you identify when to use the Merge Intervals pattern?
+If you’re asked to produce a list with only mutually exclusive intervals
+
+If you hear the term “overlapping intervals”.
+Merge interval problem patterns:
+Intervals Intersection (medium)
+Maximum CPU Load (hard)
+
+6. Cyclic Sort
+
+How do I identify this pattern?
+They will be problems involving a sorted array with numbers in a given range
+If the problem asks you to find the missing/duplicate/smallest number in an sorted/rotated array
+
+Problems featuring cyclic sort pattern:
+
+Find the Missing Number (easy)
+Find the Smallest Missing Positive Number (medium)
+
+7. In-place reversal of Linked list
+
+How do I identify when to use this pattern:
+If you’re asked to reverse a linked list without using extra memory
+
+Problems featuring in-place reversal of linked list pattern:
+
+Reverse a Sub-list (medium)
+Reverse every K-element Sub-list (medium)
+
+8. Tree BFS
+
+How to identify the Tree BFS pattern:
+If you’re asked to traverse a tree in a level-by-level fashion (or level order traversal)
+
+Problems featuring Tree BFS pattern:
+
+Binary Tree Level Order Traversal (easy)
+Zigzag Traversal (medium)
+
+9. Tree DFS
+
+The Tree DFS pattern works by starting at the root of the tree, if the node is not a leaf you need to do three things:
+Decide whether to process the current node now (pre-order), or between processing two children (in-order) or after processing both children (post-order).
+Make two recursive calls for both the children of the current node to process them.
+
+How to identify the Tree DFS pattern:
+
+If you’re asked to traverse a tree with in-order, preorder, or postorder DFS
+If the problem requires searching for something where the node is closer to a leaf
+
+Problems featuring Tree DFS pattern:
+Sum of Path Numbers (medium)
+All Paths for a Sum (medium)
+
+10. Two heaps
+
+Ways to identify the Two Heaps pattern:
+Useful in situations like Priority Queue, Scheduling
+If the problem states that you need to find the smallest/largest/median elements of a set
+Sometimes, useful in problems featuring a binary tree data structure
+
+Problems featuring
+Find the Median of a Number Stream (medium)
+
+
+11. Top K Elements
+
+Top K elements
+Any problem that asks us to find the top/smallest/frequent ‘K’ elements among a given set falls under this pattern.
+The best data structure to keep track of ‘K’ elements is Heap.
+This pattern will make use of the Heap to solve multiple problems dealing with ‘K’ elements at a time from a set of given elements.
+ The pattern looks like this:
+
+Insert ‘K’ elements into the min-heap or max-heap based on the problem.
+Iterate through the remaining numbers and if you find one that is larger than what you have in the heap,
+then remove that number and insert the larger one.
+
+12. Subsets
+
+powerset(print all subsequences)
+all subsets
+Permutations, permutations with changing case
+
+13. K-way merge
+
+use heap

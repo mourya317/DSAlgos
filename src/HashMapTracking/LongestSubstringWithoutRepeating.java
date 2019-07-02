@@ -11,7 +11,8 @@ public class LongestSubstringWithoutRepeating {
 
     public static void main(String[] args) {
         //System.out.println(lognestSubstring("abcabcbb"));
-        System.out.println(longestSubstringWithAtmostKDistinctValues("abcbbbbcccbdddadacb", 2));
+        //System.out.println(longestSubstringWithAtmostKDistinctValues("abcbbbbcccbdddadacb", 2));
+        System.out.println(longestSubstringWithAtmostKDistinctValues("aabacbebebe", 3));
     }
 
     private static int lognestSubstring(String s) {
@@ -74,7 +75,7 @@ public class LongestSubstringWithoutRepeating {
                 }
 
             } else {
-                while (map.size() > k) {
+                while (map.size() > k) {  //This while loop is redundant,since we never approach that case
                     //we need to remove the elements until map.size <= k
                     int count = map.get(s.charAt(i));
                     if (count == 1) {

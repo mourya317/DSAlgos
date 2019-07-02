@@ -1,5 +1,7 @@
 package Recursion;
 
+import java.util.List;
+
 /**
  * @author Mourya Balla
  * @project Practice
@@ -44,5 +46,63 @@ public class ReverseLL {
         n.next.next=n;
         n.next=null;
         return newHeadNode;
+    }
+
+
+    private static ListNode revKNodes(ListNode n , int k ){
+        if(n==null||n.next==null)return n;
+        if(k<1)return n;
+
+        ListNode newHeadK = revKNodes(n.next,k--);
+
+        n.next.next=n;
+        n.next=null;
+        return newHeadK;
+
+    }
+
+
+
+    /*
+    important implementation for linked list
+     */
+    private static ListNode reverseKSubList(ListNode n, int k ){
+        ListNode current = n ;
+        ListNode next=null;
+        ListNode prev=null;
+        int count = 0 ;
+
+        //reverse first k nodes
+        while(count < k && current!= null){
+            next = current.next;
+            current.next=prev;
+            prev = current;
+            current=next;
+            count++;
+        }
+
+        if(next != null){
+            n.next = reverseKSubList(next,k);
+        }
+
+        return prev;
+    }
+
+
+    /*
+    reverse a liked list iterative - important
+     */
+    private static ListNode reverseLL(ListNode n){
+        ListNode current = n;
+        ListNode next = null;
+        ListNode prev = null;
+        while(current != null){
+            next = current.next;
+            current.next=prev; // reverse link
+            // move prev, current by 1 node
+            prev = current;
+            current = next;
+        }
+        return prev;
     }
 }
