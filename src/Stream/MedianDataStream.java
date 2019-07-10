@@ -11,11 +11,24 @@ import java.util.PriorityQueue;
 public class MedianDataStream {
     public static void main(String[] args) {
         MedianFinder medianFinder = new MedianFinder();
+        medianFinder.add(5);
+        medianFinder.add(15);
         medianFinder.add(1);
-        medianFinder.add(2);
-        medianFinder.add(4);
+        medianFinder.add(3);
+        /*medianFinder.add(94);
         medianFinder.add(6);
-        medianFinder.add(6);
+        medianFinder.add(69);
+        medianFinder.add(6);*/
+        //medianFinder.add(90);
+
+        int i=0;
+       /* while(true){
+            if(i%100 == 0){
+                System.out.println("Min heap size::"+medianFinder.minHeap.size());
+                System.out.println("Max heap size::"+medianFinder.maxHeap.size());
+            }
+            medianFinder.add(i++);
+        }*/
 
         System.out.println(medianFinder.findMedian());
     }
