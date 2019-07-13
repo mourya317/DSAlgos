@@ -9,7 +9,9 @@ public class LongestPalindromicSubsequence {
     public static void main(String[] args) {
         //String s = "GEEKSFORGEEKS";
         String s = "BBABCBCAB";
+        String s1 = "forgeeksskeegfor";
         System.out.println(LPSdp(s,s.length()));
+        System.out.println(LPSubdp(s1,s1.length()));
     }
 
     // O(2^n)
@@ -53,5 +55,37 @@ public class LongestPalindromicSubsequence {
             }
         }
         return C[0][l-1];
+    }
+
+
+    //O(n^2)
+    private static String LPSubdp(String s, int l){
+        boolean C[][]=new boolean[l][l];
+        int k=0;
+        int max = Integer.MIN_VALUE;
+        int startIndex = 0;
+
+        //strings of length 1
+        for(int i=0;i<l;i++){
+            C[i][i]=true;
+        }
+
+        //iterate all substrings starting from length 2     Its a bottom up
+        //Lower diagonal are useless
+        for(int i=2;i<=l;i++){
+            for(int j=0;j<l-i+1;j++){
+                k=j+i-1;
+                if(s.charAt(j) == s.charAt(k) && i==2){
+                    C[j][k]=true;
+                }else if(s.charAt(j) == s.charAt(k) && C[j+1][k-1]){
+                    C[j][k] = true;
+                    if(i>max){
+                        startIndex = j;
+                        max = i;
+                    }
+                }
+            }
+        }
+        return s.substring(startIndex,startIndex + max  );
     }
 }

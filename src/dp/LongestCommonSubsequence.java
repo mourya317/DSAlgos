@@ -12,8 +12,10 @@ if do not match LCS = max(L1[m-1]L2[n], L1[m]L2[n-1])
 public class LongestCommonSubsequence {
     public static void main(String[] args) {
         LongestCommonSubsequence lcs = new LongestCommonSubsequence();
-        String s1 = "AGGTAB";
-        String s2 = "GXTXAYB";
+        /*String s1 = "AGGTAB";
+        String s2 = "GXTXAYB";*/
+        String s1 = "A";
+        String s2 = "A";
 
         char[] X=s1.toCharArray();
         char[] Y=s2.toCharArray();
